@@ -44,7 +44,7 @@ Exitem duas formas de subir o projeto:
 3. Acesse [http://localhost:8089/healthcheck](http://localhost:8089/healthcheck) para validar se a aplicação, variáveis de ambiente e Banco subiram corretamente
 
 ## Endpoints
-Esta API fornece documentação no padrão Collection Postman. Portando basta importar o arquivo [tech-challenge-fiap-01.postman_collection.json](docs/tech-challenge-fiap-01.postman_collection.json) da pasta `\docs` em seu Postman.
+Esta API fornece documentação no padrão Collection Postman. Portando basta importar o arquivo [tech-challenge-fiap.postman_collection.json](docs/tech-challenge-fiap.postman_collection.json) da pasta `\docs` em seu Postman.
 
 Também é possível acessar o [Link da Documentação da API](https://documenter.getpostman.com/view/2196561/2s9YysBgBA)
 

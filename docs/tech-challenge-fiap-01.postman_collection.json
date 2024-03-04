@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "2ff19fb3-449e-4c6b-b923-9a8ca88ec3b8",
-		"name": "tech-challenge-fiap-01",
+		"name": "tech-challenge-fiap",
 		"description": "Documentação do Consumo da API Fase 01 - Sistema de Restaurante",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
