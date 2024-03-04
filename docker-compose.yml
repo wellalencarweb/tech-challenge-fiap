@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+    app:
+        build:
+            context: ./
+        container_name: tech-challenge-fiap-01
+        ports:
+            - "8089:80"
+        restart: always
+        volumes:
+            - ./:/var/www/app
+        networks:
+            - challenge-network
+        depends_on:
+            - tech-challenge-mysql
+        env_file:
+            - .env
+
+    tech-challenge-mysql:
+        image: mysql:5.7.12
+        container_name: tech-challenge-mysql
+        environment:
+            MYSQL_DATABASE: tech-challenge
+            MYSQL_USER: user
+            MYSQL_PASSWORD: user
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - "3311:3306"
+        volumes:
+            - tech-challenge-mysql-data:/var/lib/mysql
+        networks:
+            - challenge-network
+        env_file:
+            - .env
+networks:
+    challenge-network:
+
+volumes:
+    tech-challenge-mysql-data:
+        driver: local
+
