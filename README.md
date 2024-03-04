@@ -1,10 +1,10 @@
-# tech-challenge-fiap-fase-01
+# tech-challenge-fiap
 Sistema de Gerenciamento de Pedidos - Lanchonete
 
 ##  Grupo 33
 [Wellington da Silva Alencar](https://github.com/wellalencarweb) | rm353081
 
-[Link do Projeto](https://github.com/wellalencarweb/tech-challenge-fiap-fase-01)
+[Link do Projeto](https://github.com/wellalencarweb/tech-challenge-fiap)
 
 [Link do Event Storm](https://miro.com/app/board/uXjVNVCMJaU=/?share_link_id=723408841855)
 
@@ -23,8 +23,8 @@ Sistema de Gerenciamento de Pedidos - Lanchonete
 ## Instalação
 Para instalação é indispensavel ter `docker` e `docker-compose` instalado em sua máquina.
 
-Clonar o Projeto `git clone https://github.com/wellalencarweb/tech-challenge-fiap-fase-01.git`
-[Link do Projeto](https://github.com/wellalencarweb/tech-challenge-fiap-fase-01)
+Clonar o Projeto `git clone https://github.com/wellalencarweb/tech-challenge-fiap.git`
+[Link do Projeto](https://github.com/wellalencarweb/tech-challenge-fiap)
 
 Exitem duas formas de subir o projeto:
 
