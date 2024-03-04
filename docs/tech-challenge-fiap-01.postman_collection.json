@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "2ff19fb3-449e-4c6b-b923-9a8ca88ec3b8",
+		"name": "tech-challenge-fiap",
+		"description": "Documentação do Consumo da API Fase 01 - Sistema de Restaurante",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "client-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/clients?name=Wellington&email=well@gmail.com&cpf=119.806.070-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Wellington"
+								},
+								{
+									"key": "email",
+									"value": "well@gmail.com"
+								},
+								{
+									"key": "cpf",
+									"value": "119.806.070-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-get-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-get-by-filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/clients?name=Wellington&email=well@gmail.com&cpf=11980607001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Wellington"
+								},
+								{
+									"key": "email",
+									"value": "well@gmail.com"
+								},
+								{
+									"key": "cpf",
+									"value": "11980607001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Arthur\",\n    \"email\": \"arthur@gmail.com\",\n    \"cpf\": \"47518500086\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/api/v1/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-delete-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "product-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/products?name=Hamburger&description=Um Hamburguer (100% carne bovina), cebola, picles, ketchup, mostarda e pão sem gergelim.&price=10.50&category_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Hamburger"
+								},
+								{
+									"key": "description",
+									"value": "Um Hamburguer (100% carne bovina), cebola, picles, ketchup, mostarda e pão sem gergelim."
+								},
+								{
+									"key": "price",
+									"value": "10.50"
+								},
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-get-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-get-by-category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/products?category=SNACK",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "SNACK"
+								},
+								{
+									"key": "category",
+									"value": "ACCOMPANIMENT",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "DRINK",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Hamburger\",\n    \"description\": \"Um Hamburguer (100% carne bovina), cebola, picles, ketchup, mostarda e pão sem gergelim.\",\n    \"price\": 9.99,\n    \"category_id\": 1,\n    \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/api/v1/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-delete-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "order-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/orders?client_id=1&products[]=1&products[]=2&products[]=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "1"
+								},
+								{
+									"key": "products[]",
+									"value": "1"
+								},
+								{
+									"key": "products[]",
+									"value": "2"
+								},
+								{
+									"key": "products[]",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order-get-by-status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/v1/orders?status=RECEIVED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "RECEIVED"
+								},
+								{
+									"key": "status",
+									"value": "PREPARING",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "READY",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "WAITING_ORDER_PICKUP",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "WITHDRAWAL",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "FINISHED",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"item": [
+				{
+					"name": "healthcheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/healthcheck",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"healthcheck"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
