@@ -4,10 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Src\BoundedContext\Client\Infrastructure\Eloquent\ClientModel;
 use Src\BoundedContext\Order\Domain\Enums\OrderStatusEnum;
 use Src\BoundedContext\Product\Domain\Enums\ProductCategoryEnum;
 use Src\BoundedContext\Product\Infrastructure\Eloquent\ProductModel;
+use Src\Gateways\Client\ClientModel;
 
 class DatabaseSeeder extends Seeder
 {

@@ -27,9 +27,9 @@ Route::prefix('v1')->group(function () {
         Route::post('', 'CreateClientController');
 
         /**
-         * @uses GetClientController
+         * @uses GetClientControllerApi
          */
-        Route::get('{id}', 'GetClientController');
+        Route::get('{id}', 'GetClientControllerApi');
 
         /**
          * @uses GetClientByCriteriaController
