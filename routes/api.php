@@ -32,9 +32,9 @@ Route::prefix('v1')->group(function () {
         Route::get('{id}', 'GetClientControllerApi');
 
         /**
-         * @uses GetClientByCriteriaController
+         * @uses GetClientByCriteriaControllerApi
          */
-        Route::get('', 'GetClientByCriteriaController');
+        Route::get('', 'GetClientByCriteriaControllerApi');
 
         /**
          * @uses UpdateClientController
