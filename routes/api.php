@@ -42,9 +42,9 @@ Route::prefix('v1')->group(function () {
         Route::put('{id}', 'UpdateClientControllerApi');
 
         /**
-         * @uses DeleteClientController
+         * @uses DeleteClientControllerApi
          */
-        Route::delete('{id}', 'DeleteClientController');
+        Route::delete('{id}', 'DeleteClientControllerApi');
     });
 
     Route::prefix('products')->namespace('App\Http\Controllers\Product')->group(function () {

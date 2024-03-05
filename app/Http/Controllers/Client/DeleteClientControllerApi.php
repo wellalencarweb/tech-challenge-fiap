@@ -5,13 +5,12 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Src\Controllers\Client\GetClientController;
+use Src\Controllers\Client\DeleteClientController;
 
-
-class GetClientControllerApi extends Controller
+class DeleteClientControllerApi extends Controller
 {
     public function __construct(
-        private GetClientController $getClientController
+        private DeleteClientController $deleteClientController
     ){
     }
 
@@ -23,6 +22,6 @@ class GetClientControllerApi extends Controller
      */
     public function __invoke(Request $request): Response
     {
-        return  $this->getClientController->__invoke($request);
+        return $this->deleteClientController->__invoke($request);
     }
 }

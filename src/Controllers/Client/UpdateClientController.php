@@ -7,7 +7,6 @@ namespace Src\Controllers\Client;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use PhpParser\Node\Stmt\TryCatch;
 use Src\Adapters\ClientAdapter;
 use Src\Gateways\Client\ClientGateway;
 use Src\UseCases\Client\GetClientUseCase;

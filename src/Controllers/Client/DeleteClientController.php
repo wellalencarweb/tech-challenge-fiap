@@ -7,10 +7,11 @@ namespace Src\Controllers\Client;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Src\Adapters\ClientAdapter;
-use Src\UseCases\Client\GetClientUseCase;
 use Src\Gateways\Client\ClientGateway;
+use Src\UseCases\Client\DeleteClientUseCase;
+use Src\UseCases\Client\GetClientUseCase;
 
-final class GetClientController
+final class DeleteClientController
 {
     public function __construct(
         private ClientGateway $gateway,
@@ -29,9 +30,9 @@ final class GetClientController
         $clientId = (int)$request->id;
 
         $getClientUseCase = new GetClientUseCase($this->gateway);
-        $clientData = $getClientUseCase->__invoke($clientId);
+        $client           = $getClientUseCase->__invoke($clientId);
 
-        if (!$clientData) {
+        if (!$client) {
             return $this->clientAdapter
                 ->adaptJsonMessageError(
                     ['status' => 'error', 'message' => 'client not found'],
@@ -39,6 +40,9 @@ final class GetClientController
                 );
         }
 
-        return $this->clientAdapter->adaptJsonClients($clientData, Response::HTTP_OK);
+        $deleteClientUseCase = new DeleteClientUseCase($this->gateway);
+        $deleteClientUseCase->__invoke($clientId);
+
+        return $this->clientAdapter->adaptJsonClients([], Response::HTTP_NO_CONTENT);
     }
 }
