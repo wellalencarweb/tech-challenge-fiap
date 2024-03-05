@@ -5,21 +5,20 @@ declare(strict_types=1);
 namespace Src\UseCases\Client;
 
 
-use Src\Entities\Client\Client;
 use Src\Entities\Client\ValueObjects\ClientId;
 use Src\Interfaces\Client\ClientGatewayInterface;
 
-final class GetClientUseCase
+final class DeleteClientUseCase
 {
     public function __construct(
         private ClientGatewayInterface $gateway
     ){
     }
 
-    public function __invoke(int $clientId): ?Client
+    public function __invoke(int $clientId): void
     {
         $id = new ClientId($clientId);
 
-        return $this->gateway->find($id);
+        $this->gateway->delete($id);
     }
 }
