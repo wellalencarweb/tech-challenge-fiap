@@ -22,9 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('v1')->group(function () {
     Route::prefix('clients')->namespace('App\Http\Controllers\Client')->group(function () {
         /**
-         * @uses CreateClientController
+         * @uses CreateClientControllerApi
          */
-        Route::post('', 'CreateClientController');
+        Route::post('', 'CreateClientControllerApi');
 
         /**
          * @uses GetClientControllerApi
