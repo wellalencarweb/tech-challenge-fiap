@@ -37,9 +37,9 @@ Route::prefix('v1')->group(function () {
         Route::get('', 'GetClientByCriteriaControllerApi');
 
         /**
-         * @uses UpdateClientController
+         * @uses UpdateClientControllerApi
          */
-        Route::put('{id}', 'UpdateClientController');
+        Route::put('{id}', 'UpdateClientControllerApi');
 
         /**
          * @uses DeleteClientController
