@@ -2,28 +2,26 @@
 
 namespace Src\Adapters;
 
-use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use JetBrains\PhpStorm\ArrayShape;
 use JetBrains\PhpStorm\Pure;
 use Src\Entities\Client\Client;
 
 
-class ClientAdapter extends JsonResource
+class ClientAdapter
 {
     /**
      * Transform the resource into an array.
      *
-     * @param  Request  $request
+     * @param array | Client   $request
      * @return array
      */
-    public function toArray(Request $request)
+    public function toArray(array | Client $request)
     {
 
         $data = ['data' => []];
 
-        $resource = $this->resource;
+        $resource = $request;
 
         if ($resource instanceof Client) {
             $data['data'][] = $this->mapDomainClient($resource);
@@ -49,8 +47,14 @@ class ClientAdapter extends JsonResource
         ];
     }
 
-    public function adaptJsonClients(array | ClientAdapter $data, $statusCode): Response
+    public function adaptJsonClients(array | Client $data, $statusCode): Response
     {
+        $data = $this->toArray($data);
         return response($data, $statusCode);
+    }
+
+    public function adaptJsonMessageError(array $message, $statusCode): Response
+    {
+        return response($message ?? ['message-error-default'], $statusCode);
     }
 }

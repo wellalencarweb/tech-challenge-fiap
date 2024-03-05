@@ -12,11 +12,10 @@ use Src\Controllers\Client\GetClientController;
 class GetClientControllerApi extends Controller
 {
 
-    private GetClientController $getClientController;
-
-    public function __construct(GetClientController $getClientController)
-    {
-        $this->getClientController = $getClientController;
+    public function __construct(
+        private GetClientController $getClientController,
+        private ClientAdapter $clientAdapter
+    ){
     }
 
     /**
@@ -29,12 +28,10 @@ class GetClientControllerApi extends Controller
     {
         $clientData = $this->getClientController->__invoke($request);
 
-        $adapted = new ClientAdapter($clientData);
-
-        if (!$adapted->resource) {
-            return $adapted->adaptJsonClients(['status' => 'error', 'message' => 'client not found'], Response::HTTP_NOT_FOUND);
+        if (!$clientData) {
+            return $this->clientAdapter->adaptJsonMessageError(['status' => 'error', 'message' => 'client not found'], Response::HTTP_NOT_FOUND);
         }
 
-        return $adapted->adaptJsonClients($adapted, Response::HTTP_OK);
+        return $this->clientAdapter->adaptJsonClients($clientData, Response::HTTP_OK);
     }
 }
