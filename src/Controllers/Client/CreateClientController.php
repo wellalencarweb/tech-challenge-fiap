@@ -8,8 +8,8 @@ use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Src\Adapters\ClientAdapter;
-use Src\BoundedContext\Client\Application\Exceptions\ValidationException;
-use Src\BoundedContext\Client\Application\Validations\CreateClientValidation;
+use Src\Controllers\Client\Validations\CreateClientValidation;
+use Src\Controllers\Exceptions\ValidationException;
 use Src\Gateways\Client\ClientGateway;
 use Src\UseCases\Client\CreateClientUseCase;
 
