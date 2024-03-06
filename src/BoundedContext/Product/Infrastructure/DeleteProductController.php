@@ -7,13 +7,13 @@ namespace Src\BoundedContext\Product\Infrastructure;
 use Illuminate\Http\Request;
 use Src\BoundedContext\Product\Application\DeleteProductUseCase;
 use Src\BoundedContext\Product\Application\GetProductUseCase;
-use Src\BoundedContext\Product\Infrastructure\Eloquent\EloquentProductRepository;
+use Src\BoundedContext\Product\Infrastructure\Eloquent\ProductGateway;
 
 final class DeleteProductController
 {
-    private EloquentProductRepository $repository;
+    private ProductGateway $repository;
 
-    public function __construct(EloquentProductRepository $repository)
+    public function __construct(ProductGateway $repository)
     {
         $this->repository = $repository;
     }

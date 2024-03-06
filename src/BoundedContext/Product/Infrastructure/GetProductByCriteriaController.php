@@ -6,13 +6,13 @@ namespace Src\BoundedContext\Product\Infrastructure;
 
 use Illuminate\Http\Request;
 use Src\BoundedContext\Product\Application\GetProductByCriteriaUseCase;
-use Src\BoundedContext\Product\Infrastructure\Eloquent\EloquentProductRepository;
+use Src\BoundedContext\Product\Infrastructure\Eloquent\ProductGateway;
 
 final class GetProductByCriteriaController
 {
-    private EloquentProductRepository $repository;
+    private ProductGateway $repository;
 
-    public function __construct(EloquentProductRepository $repository)
+    public function __construct(ProductGateway $repository)
     {
         $this->repository = $repository;
     }
