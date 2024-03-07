@@ -49,29 +49,29 @@ Route::prefix('v1')->group(function () {
 
     Route::prefix('products')->namespace('App\Http\Controllers\Product')->group(function () {
         /**
-         * @uses CreateProductController
+         * @uses CreateProductControllerApi
          */
-        Route::post('', 'CreateProductController');
+        Route::post('', 'CreateProductControllerApi');
 
         /**
-         * @uses GetProductController
+         * @uses GetProductControllerApi
          */
-        Route::get('{id}', 'GetProductController');
+        Route::get('{id}', 'GetProductControllerApi');
 
         /**
-         * @uses GetProductByCriteriaController
+         * @uses GetProductByCriteriaControllerApi
          */
-        Route::get('', 'GetProductByCriteriaController');
+        Route::get('', 'GetProductByCriteriaControllerApi');
 
         /**
-         * @uses UpdateProductController
+         * @uses UpdateProductControllerApi
          */
-        Route::put('{id}', 'UpdateProductController');
+        Route::put('{id}', 'UpdateProductControllerApi');
 
         /**
-         * @uses DeleteProductController
+         * @uses DeleteProductControllerApi
          */
-        Route::delete('{id}', 'DeleteProductController');
+        Route::delete('{id}', 'DeleteProductControllerApi');
     });
 
     Route::prefix('orders')->namespace('App\Http\Controllers\Order')->group(function () {

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Src\Adapters\ProductAdapter;
 use Src\Controllers\Exceptions\ValidationException;
+use Src\Controllers\Product\Validations\CreateProductValidation;
 use Src\Gateways\Product\ProductGateway;
 use Src\UseCases\Product\CreateProductUseCase;
 
@@ -29,6 +30,8 @@ final class CreateProductController
     public function __invoke(Request $request): Response
     {
         try {
+            CreateProductValidation::validate($request->all());
+
             $productName            = $request->input('name');
             $productDescription     = $request->input('description');
             $productPrice           = (float) $request->input('price');

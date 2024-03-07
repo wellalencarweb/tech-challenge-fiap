@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Controllers\Client;
+namespace Src\Controllers\Product;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
