@@ -3,7 +3,7 @@
 namespace Src\Gateways\Product;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Src\Entities\Products\Enums\ProductCategoryEnum;
+use Src\Entities\Product\Enums\ProductCategoryEnum;
 
 
 class ProductFactory extends Factory
