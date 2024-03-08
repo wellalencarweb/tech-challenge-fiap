@@ -76,14 +76,14 @@ Route::prefix('v1')->group(function () {
 
     Route::prefix('orders')->namespace('App\Http\Controllers\Order')->group(function () {
         /**
-         * @uses CreateOrderController
+         * @uses CreateOrderControllerApi
          */
-        Route::post('', 'CreateOrderController');
+        Route::post('', 'CreateOrderControllerApi');
 
         /**
-         * @uses GetOrderByCriteriaController
+         * @uses GetOrderByCriteriaControllerApi
          */
-        Route::get('', 'GetOrderByCriteriaController');
+        Route::get('', 'GetOrderByCriteriaControllerApi');
 
     });
 });

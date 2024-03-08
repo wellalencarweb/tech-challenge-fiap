@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Src\BoundedContext\Order\Domain\Enums\OrderStatusEnum;
+use Src\Entities\Order\Enums\OrderStatusEnum;
 use Src\Entities\Product\Enums\ProductCategoryEnum;
 use Src\Gateways\Client\ClientModel;
 use Src\Gateways\Product\ProductModel;
