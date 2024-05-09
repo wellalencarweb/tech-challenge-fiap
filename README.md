@@ -1,5 +1,5 @@
 # tech-challenge-fiap
-Sistema de Gerenciamento de Pedidos - Lanchonete
+Sistema de Gerenciamento de Pedidos - Lanchonete.
 
 ##  Grupo 33
 [Wellington da Silva Alencar](https://github.com/wellalencarweb) | rm353081
