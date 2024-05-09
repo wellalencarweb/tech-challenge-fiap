@@ -17,7 +17,7 @@ services:
             - .env
 
     tech-challenge-mysql:
-        image: mysql:5.7.12
+        image: mysql:5.7.35
         container_name: tech-challenge-mysql
         environment:
             MYSQL_DATABASE: tech-challenge
